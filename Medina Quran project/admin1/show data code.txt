@@ -1,0 +1,12 @@
+
+    if ($result){
+        while($row = mysqli_fetch_assoc($result)){
+            echo "<tr><td>" . $row['id'] . "</td><td>" . $row['Name'] . "</td><td>" . $row['Age'] . "</td><td>"  . $row['Country'] . "</td><td>"   . $row['Phone'] . "</td><td>"  . $row['Address'] . "</td><td>" . $row['QuranKnow']  . "</td><td>" . $row['Level']  . "</td><td>" . '<div class="btn-group"><a class="btn btn-danger" href="delete.php?id="<?php echo $row["id"]; ?>>Delete</a></div>' .
+             "</td></tr>";
+        }
+        echo "</table>";
+    }
+    else{
+        echo "يوجد خطا ما";
+    }
+    
