@@ -26,6 +26,8 @@
         <div class="logo">
             <img src="images/bg5.png">
             <h2>مركز المدينة لتحفيظ القرآن الكريم</h2>
+            <a class="btn btn-primary" href="../admin.php">العودة لصفحة التحكم </a>
+            <a class="btn btn-warning" href="../../index.html">العودة للصفحة الرئيسية </a>
         </div>
         <div class="book">
             <p style="color:red">اختر القسم : </p>

@@ -61,7 +61,7 @@ $row= mysqli_fetch_array($result);
 <h3><label >المنطقة السكنية :</label></h3>
 <input type="text" name="Address" class="form-control input-lg" class="txtField" value="<?php echo $row['Address']; ?>">
 
-<h3><label >حفظ القرآن :</label></h3>
+<h3><label >الحفظ السابق ( إن وجد )</label></h3>
 <input type="text" name="QuranKnow" class="form-control input-lg" class="txtField" value="<?php echo $row['QuranKnow']; ?>">
 
 <h3><label >مستوى الحفظ :</label></h3>

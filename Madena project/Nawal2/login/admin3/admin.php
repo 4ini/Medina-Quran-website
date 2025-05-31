@@ -2,10 +2,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <script src="sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <?php
-    include "header.php";
+    include "header-reg.php";
 ?>
 
 
@@ -27,45 +29,28 @@
     <th>تعديل الطلب</th>
     <form action="admin.php" method="post">
  <script>
-     function DELETE(){
-         alert("هل انت متأكد من الحذف؟")
-     }</script>
+     function DELETE(){ 
+       
+       confirm("هل انت متأكد من الحذف؟")
+     
+     }
+     </script>
+
+
+
+
+
+
+
+
+</script>
+        
+
      <script>
                  
-     function Accept(ctl, events){
-        debugger;
-    event.preventDefault();
-    var defaultAction = $(ctl).prop("href");
-    swal({
-        title: "Are you sure?",
-        text: "You will  be able to add it back again!",
-        type: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#DD6B55",
-        confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "Cancel",
-        closeOnConfirm: false,
-        closeOnCancel: false
-    },
-        function (isConfirm) {
-            if (isConfirm) {
-                $.get(ctl);
-                swal({
-                    title: "success",
-                    text: "Deleted",
-                    confirmButtonText: "ok",
-                    allowOutsideClick: "true"
-                }, function () { window.location.href = 'accept.php' })
-
-     // $("#signupform").submit();
-            } else {
-                swal("Cancelled", "Is safe :)", "success");
-
-            }
-        });
-}
-    
-               </script>
+     function Accept(){
+        confirm("هل انت متأكد من القبول")
+      } </script>
 </body>
 <?php
 
@@ -99,7 +84,7 @@
            
             <td><a class='btn btn-danger' onclick='DELETE()' href='delete.php?id=$row[id]'> حذف</td>
             
-            <td><a class='btn btn-success' href='accept.php?id=$row[id] '> قبول</a></td>
+            <td><a class='btn btn-success' onclick='Accept()' href='accept.php?id=$row[id] '> قبول</a></td>
 
             <td><a class='btn btn-primary'  name='send2' href='edit.php?id=$row[id]'> تعديل</a></td>
             </tr>
